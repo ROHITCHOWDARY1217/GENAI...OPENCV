@@ -6,6 +6,9 @@ st.title("🎭 Welcome to Rohit's OpenCV Filters App!")
 st.write("""
 Select a page from the sidebar to start:
 - **Face Filters Page** → Add live emoji overlays  
-- **Eye Scanner Page** → Detect and highlight eyes
 - **Motion Detector Page** → Detect motion in real-time 
+- **Live description Page** → Generate live captions for your camera feed
+- **Eye detection Page** → Detect and highlight eyes
+- **Face detection page** → Detect and highlight faces
+- **Persons detection page** → Detect and highlight persons         
 """)
