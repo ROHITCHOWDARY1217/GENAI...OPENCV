@@ -1,4 +1,4 @@
-import PIL.Image
+import PIL.Image    
 import google.generativeai as genai
 import cv2 as cv 
 import streamlit as st
