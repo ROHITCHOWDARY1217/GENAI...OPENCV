@@ -19,7 +19,7 @@ def motionDetector():
             cv.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
             if prev_x is not None and prev_y is not None:
                 if abs(x - prev_x) > 5 or abs(y - prev_y) > 5: 
-                    st.write("Motion Detected!")
+                    st.title("Motion Detected!")
                     video.release()
                     cv.destroyAllWindows()
                     return

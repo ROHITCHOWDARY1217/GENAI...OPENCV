@@ -18,6 +18,9 @@ def faceScanner():
         isTrue, frame = video.read()
         isScan, scan_frame = scan_video.read()
         isAnim, anim_frame = animation_video.read()
+        frame_count += 1
+        if frame_count % 3 != 0:
+            continue
 
 
         if not isTrue:
@@ -34,10 +37,9 @@ def faceScanner():
             frame[y:y + h, x:x + w] = blend_overlay(frame[y:y + h, x:x + w], scan_frame_resized)
 
         frame_rgb = cv.cvtColor(cv.flip(frame, 1), cv.COLOR_BGR2RGB)
-        frame_placeholder.image(frame_rgb)
         if isAnim:
             frame_placeholder2.image(anim_frame)
-
+        frame_placeholder.image(frame_rgb)
         if cv.waitKey(1) & 0xFF == ord('d'):
             break
 
